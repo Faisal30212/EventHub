@@ -1,0 +1,289 @@
+.birthday-banner {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 110px 0;
+}
+
+.birthday-banner h1 {
+  font-size: 56px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.birthday-banner p {
+  max-width: 700px;
+
+  margin: auto;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  opacity: 0.95;
+}
+
+.birthday-about {
+  padding: 100px 0;
+
+  background: #fff;
+}
+
+.birthday-about img {
+  transition: 0.4s;
+}
+
+.birthday-about img:hover {
+  transform: scale(1.03);
+}
+
+.section-tag {
+  display: inline-block;
+
+  background: #fff3e8;
+
+  color: #ea580c;
+
+  padding: 8px 20px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.birthday-about h2 {
+  font-size: 42px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.birthday-about p {
+  color: #666;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+.birthday-services {
+  background: #fff8f2;
+
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: #666;
+}
+
+.service-card {
+  background: #fff;
+
+  padding: 35px;
+
+  text-align: center;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.service-card svg {
+  font-size: 48px;
+
+  color: #f97316;
+
+  margin-bottom: 20px;
+}
+
+.service-card h4 {
+  margin-bottom: 15px;
+
+  font-weight: 700;
+}
+
+.service-card p {
+  color: #666;
+
+  line-height: 1.8;
+}
+
+.birthday-packages {
+  padding: 100px 0;
+
+  background: #fff;
+}
+
+.package-card {
+  position: relative;
+
+  background: #fff;
+
+  border-radius: 22px;
+
+  padding: 45px 35px;
+
+  text-align: center;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  height: 100%;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+}
+
+.package-card h3 {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.package-card h1 {
+  color: #f97316;
+
+  font-size: 46px;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+}
+
+.package-card ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin-bottom: 30px;
+}
+
+.package-card ul li {
+  margin-bottom: 15px;
+
+  color: #555;
+}
+
+.package-card button {
+  border-radius: 12px;
+
+  padding: 12px 30px;
+
+  font-weight: 600;
+}
+
+.popular {
+  border: 3px solid #f97316;
+
+  transform: scale(1.05);
+}
+
+.popular:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+  position: absolute;
+
+  top: -15px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #f97316;
+
+  color: #fff;
+
+  padding: 8px 22px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .birthday-banner {
+    padding: 80px 0;
+  }
+
+  .birthday-banner h1 {
+    font-size: 42px;
+  }
+
+  .birthday-about {
+    text-align: center;
+  }
+
+  .birthday-about img {
+    margin-bottom: 40px;
+  }
+
+  .birthday-about h2 {
+    font-size: 34px;
+  }
+
+  .popular {
+    transform: none;
+  }
+
+  .popular:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .birthday-banner h1 {
+    font-size: 32px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .birthday-about h2 {
+    font-size: 30px;
+  }
+
+  .package-card {
+    padding: 35px 25px;
+  }
+}

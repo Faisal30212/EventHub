@@ -1,0 +1,204 @@
+.wedding-details-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top left, #831843, transparent 35%),
+    radial-gradient(circle at bottom right, #7c3aed, transparent 35%), #1f1025;
+}
+
+.wedding-details-card {
+  width: 100%;
+  max-width: 950px;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  background: #2a1728;
+
+  border: 1px solid #9d174d;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.details-image {
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+
+  object-fit: cover;
+}
+
+.details-content {
+  padding: 40px;
+}
+
+.details-content h1 {
+  color: #fff1f2;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  margin-bottom: 15px;
+}
+
+.details-description {
+  color: #f5b7d2;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.details-info {
+  margin-bottom: 25px;
+}
+
+.details-info p {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 10px 0;
+  margin: 0;
+
+  border-bottom: 1px solid #4a243d;
+}
+
+.details-info strong {
+  color: #f472b6;
+}
+
+.details-info span {
+  color: #fce7f3;
+
+  text-align: right;
+}
+
+.details-price {
+  padding: 16px;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #500724, #3b0764);
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-price span {
+  color: #fbcfe8;
+}
+
+.details-price strong {
+  color: #f9a8d4;
+
+  font-size: 24px;
+}
+
+/* Book Now */
+
+.book-now-button {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #db2777, #9333ea);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.book-now-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(219, 39, 119, 0.4);
+}
+
+/* Back Button */
+
+.back-button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #9d174d;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #fbcfe8;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  background: #500724;
+
+  color: white;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .wedding-details-page {
+    padding: 30px 15px;
+  }
+
+  .wedding-details-card {
+    grid-template-columns: 1fr;
+  }
+
+  .details-image {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .details-content {
+    padding: 25px;
+  }
+
+  .details-content h1 {
+    font-size: 28px;
+  }
+
+  .details-info p {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .details-info span {
+    text-align: left;
+  }
+}

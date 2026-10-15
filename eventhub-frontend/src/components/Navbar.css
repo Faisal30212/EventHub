@@ -1,0 +1,616 @@
+/* ==========================================
+   EVENTHUB NAVBAR
+   Navy + Gold Premium Design
+========================================== */
+
+.custom-navbar {
+  min-height: 72px;
+  padding: 0 !important;
+  background: #18243d !important;
+  border-bottom: 1px solid rgba(215, 179, 90, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 1000;
+}
+
+.custom-navbar .container {
+  min-height: 72px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.custom-navbar .logo {
+  color: #d7b35a !important;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.custom-navbar .logo:hover {
+  color: #e6c875 !important;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.custom-navbar .navbar-nav {
+  gap: 3px;
+}
+
+.custom-navbar .nav-link {
+  display: flex;
+  align-items: center;
+
+  padding: 8px 10px !important;
+
+  color: #d5dbe6 !important;
+  background: transparent !important;
+  border: none !important;
+
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #d7b35a !important;
+}
+
+/* Services / About / Contact buttons */
+
+.custom-navbar .nav-info-button {
+  outline: none;
+}
+
+/* =========================
+   LOGIN
+========================= */
+
+.custom-navbar .login-btn {
+  padding: 8px 16px !important;
+
+  color: #ffffff !important;
+  background: transparent !important;
+
+  border: 1px solid #d7b35a !important;
+  border-radius: 4px !important;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.custom-navbar .login-btn:hover {
+  color: #18243d !important;
+  background: #d7b35a !important;
+}
+
+/* =========================
+   REGISTER
+========================= */
+
+.custom-navbar .register-btn {
+  padding: 8px 16px !important;
+
+  color: #18243d !important;
+  background: #d7b35a !important;
+
+  border: 1px solid #d7b35a !important;
+  border-radius: 4px !important;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.custom-navbar .register-btn:hover {
+  color: #18243d !important;
+  background: #e6c875 !important;
+  border-color: #e6c875 !important;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.custom-navbar .navbar-toggler {
+  padding: 6px 9px;
+  border: 1px solid rgba(215, 179, 90, 0.5);
+  border-radius: 4px;
+}
+
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(215, 179, 90, 0.2);
+}
+
+.custom-navbar .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================
+   INFORMATION POPUP OVERLAY
+========================================== */
+
+.info-popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(8, 15, 30, 0.68);
+
+  z-index: 2000;
+
+  animation: popupOverlay 0.18s ease;
+}
+
+@keyframes popupOverlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   POPUP CONTAINER
+========================================== */
+
+.info-popup {
+  position: relative;
+
+  width: min(620px, 92vw);
+  max-height: 78vh;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(215, 179, 90, 0.5);
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(215, 179, 90, 0.08);
+
+  animation: popupOpen 0.22s ease;
+}
+
+@keyframes popupOpen {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Scrollbar */
+
+.info-popup::-webkit-scrollbar {
+  width: 7px;
+}
+
+.info-popup::-webkit-scrollbar-track {
+  background: #f1f3f6;
+  border-radius: 10px;
+}
+
+.info-popup::-webkit-scrollbar-thumb {
+  background: #c7a64e;
+  border-radius: 10px;
+}
+
+.info-popup::-webkit-scrollbar-thumb:hover {
+  background: #a9852d;
+}
+
+/* Firefox */
+
+.info-popup {
+  scrollbar-width: thin;
+  scrollbar-color: #c7a64e #f1f3f6;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.popup-close {
+  position: sticky;
+  top: 0;
+  float: right;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: -8px -8px 0 0;
+
+  color: #18243d;
+  background: #f7f0df;
+
+  border: 1px solid #dfc98f;
+  border-radius: 4px;
+
+  font-size: 19px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: 0.2s ease;
+}
+
+.popup-close:hover {
+  color: #ffffff;
+  background: #18243d;
+  border-color: #18243d;
+}
+
+/* ==========================================
+   POPUP CONTENT
+========================================== */
+
+.popup-content {
+  clear: both;
+  padding-top: 4px;
+}
+
+.popup-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 9px;
+
+  background: #f7f0df;
+  border: 1px solid #dfc98f;
+  border-radius: 5px;
+
+  font-size: 17px;
+}
+
+.popup-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #a17b25;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.popup-content h2 {
+  margin: 0 0 9px;
+
+  color: #18243d;
+
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.popup-intro {
+  margin: 0 0 22px;
+
+  color: #64748b;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   SERVICES
+========================================== */
+
+.popup-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+}
+
+.popup-service-card {
+  padding: 14px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e2e6eb;
+  border-left: 3px solid #d7b35a;
+
+  border-radius: 5px;
+
+  transition: 0.2s ease;
+}
+
+.popup-service-card:hover {
+  background: #ffffff;
+  border-color: #d7b35a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(24, 36, 61, 0.07);
+}
+
+.service-card-icon {
+  margin-bottom: 7px;
+
+  font-size: 19px;
+}
+
+.popup-service-card h3 {
+  margin: 0 0 5px;
+
+  color: #18243d;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.popup-service-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.popup-about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+}
+
+.popup-about-card {
+  padding: 14px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e2e6eb;
+  border-top: 3px solid #d7b35a;
+
+  border-radius: 5px;
+
+  transition: 0.2s ease;
+}
+
+.popup-about-card:hover {
+  background: #ffffff;
+  border-color: #d7b35a;
+  box-shadow: 0 5px 14px rgba(24, 36, 61, 0.07);
+}
+
+.about-card-icon {
+  margin-bottom: 7px;
+  font-size: 19px;
+}
+
+.popup-about-card h3 {
+  margin: 0 0 5px;
+
+  color: #18243d;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.popup-about-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.popup-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.popup-contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  padding: 13px;
+
+  background: #fafbfc;
+
+  border: 1px solid #e2e6eb;
+
+  border-radius: 5px;
+}
+
+.contact-card-icon {
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f0df;
+  border: 1px solid #dfc98f;
+  border-radius: 4px;
+
+  font-size: 14px;
+}
+
+.popup-contact-card h3 {
+  margin: 0 0 4px;
+
+  color: #18243d;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.popup-contact-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   CONTACT NOTE
+========================================== */
+
+.contact-note {
+  padding: 14px 16px;
+
+  background: #f7f0df;
+
+  border-left: 3px solid #d7b35a;
+  border-radius: 4px;
+}
+
+.contact-note strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #18243d;
+
+  font-size: 12px;
+}
+
+.contact-note p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .custom-navbar .nav-link {
+    padding: 8px 7px !important;
+    font-size: 11px;
+  }
+
+  .custom-navbar .navbar-nav {
+    gap: 0;
+  }
+
+  .info-popup {
+    width: min(600px, 92vw);
+    max-height: 80vh;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .custom-navbar {
+    min-height: 65px;
+  }
+
+  .custom-navbar .container {
+    min-height: 65px;
+  }
+
+  .custom-navbar .logo {
+    font-size: 22px;
+  }
+
+  .custom-navbar .navbar-collapse {
+    padding: 12px 0 15px;
+  }
+
+  .custom-navbar .navbar-nav {
+    align-items: stretch !important;
+  }
+
+  .custom-navbar .nav-link {
+    justify-content: center;
+    width: 100%;
+    padding: 9px !important;
+  }
+
+  .custom-navbar .login-btn,
+  .custom-navbar .register-btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0 0 !important;
+    text-align: center;
+  }
+
+  .info-popup-overlay {
+    padding: 12px;
+  }
+
+  .info-popup {
+    width: 100%;
+    max-height: 85vh;
+    padding: 22px;
+    border-radius: 8px;
+  }
+
+  .popup-content h2 {
+    font-size: 23px;
+  }
+
+  .popup-service-grid,
+  .popup-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .popup-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,141 @@
+.conference-page {
+  min-height: 100vh;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe, #e0f2fe);
+}
+
+.conference-title {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.conference-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 50px;
+}
+
+.conference-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.conference-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.12);
+  transition: 0.3s ease;
+}
+
+.conference-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(30, 64, 175, 0.22);
+}
+
+.conference-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.conference-card-body {
+  padding: 25px;
+}
+
+.conference-card-body h2 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  color: #172554;
+}
+
+.conference-description {
+  color: #64748b;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.conference-details p {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 9px 0;
+  margin: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.conference-details strong {
+  color: #2563eb;
+}
+
+.conference-details span {
+  color: #334155;
+  text-align: right;
+}
+
+.conference-bottom {
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conference-bottom span {
+  color: #64748b;
+}
+
+.conference-bottom strong {
+  font-size: 22px;
+  color: #1d4ed8;
+}
+
+.conference-button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.conference-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.conference-empty {
+  text-align: center;
+  font-size: 18px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .conference-page {
+    padding: 40px 15px;
+  }
+
+  .conference-title {
+    font-size: 34px;
+  }
+
+  .conference-grid {
+    grid-template-columns: 1fr;
+  }
+}

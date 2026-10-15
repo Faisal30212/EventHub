@@ -1,0 +1,28 @@
+
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Frontend build output
+dist/
+**/dist/
+dist-ssr/
+build/
+
+# Java / Spring Boot build output
+**/target/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db

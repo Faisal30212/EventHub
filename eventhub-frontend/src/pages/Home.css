@@ -1,0 +1,152 @@
+/* ==========================================
+   EVENTHUB HOME - CUSTOMER REVIEWS
+   Navy + Gold | Compact
+========================================== */
+
+.home-reviews {
+  padding: 55px 20px 60px !important;
+  text-align: center;
+  background: #f7f5ef !important;
+}
+
+.home-reviews-heading {
+  max-width: 680px;
+  margin: 0 auto 28px !important;
+}
+
+.home-reviews-heading h2 {
+  margin: 0 0 8px !important;
+  color: #18243d !important;
+  font-size: 31px !important;
+  line-height: 1.25;
+  font-weight: 750 !important;
+}
+
+.home-reviews-heading p {
+  margin: 0 !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+  line-height: 1.6;
+}
+
+.home-reviews-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 !important;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  text-align: left;
+}
+
+.home-review-card {
+  min-height: 150px;
+  padding: 18px !important;
+
+  background: #ffffff !important;
+  border: 1px solid #e2ded4 !important;
+  border-radius: 6px !important;
+
+  box-shadow: 0 4px 14px rgba(24, 36, 61, 0.055) !important;
+}
+
+.home-review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.home-review-top strong {
+  color: #18243d !important;
+  font-size: 13px !important;
+}
+
+.home-review-top span {
+  color: #94a3b8 !important;
+  font-size: 10px !important;
+}
+
+.home-review-rating {
+  margin-bottom: 8px !important;
+  color: #d7b35a !important;
+  font-size: 12px !important;
+  letter-spacing: 1px;
+}
+
+.home-review-comment {
+  min-height: 42px;
+  margin: 0 0 11px !important;
+
+  color: #64748b !important;
+  font-size: 12px !important;
+  line-height: 1.55;
+}
+
+.home-review-event {
+  display: inline-block;
+
+  padding: 4px 8px;
+
+  color: #a17b25 !important;
+  background: #f7f0df !important;
+
+  border-radius: 3px;
+
+  font-size: 10px !important;
+  font-weight: 700;
+}
+
+.no-reviews {
+  grid-column: 1 / -1;
+  margin: 0 !important;
+  color: #64748b !important;
+  font-size: 13px;
+  text-align: center;
+}
+
+.home-view-reviews-button {
+  margin-top: 25px !important;
+
+  padding: 9px 18px !important;
+
+  color: #18243d !important;
+  background: #d7b35a !important;
+
+  border: 1px solid #d7b35a !important;
+  border-radius: 4px;
+
+  font-size: 11px !important;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.home-view-reviews-button:hover {
+  color: #ffffff !important;
+  background: #18243d !important;
+  border-color: #18243d !important;
+}
+
+@media (max-width: 991px) {
+  .home-reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .home-reviews {
+    padding: 45px 15px 50px !important;
+  }
+
+  .home-reviews-heading h2 {
+    font-size: 26px !important;
+  }
+
+  .home-reviews-container {
+    grid-template-columns: 1fr;
+  }
+}

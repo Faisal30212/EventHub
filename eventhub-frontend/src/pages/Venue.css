@@ -1,0 +1,267 @@
+/* =========================================
+   EVENTHUB VENUES
+   Compact Navy + Gold Design
+========================================= */
+
+.venue-page {
+  min-height: 100vh;
+  padding: 45px 20px 60px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(215, 179, 90, 0.08),
+      transparent 28%
+    ),
+    #f7f8fb;
+}
+
+.venue-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.venue-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.venue-heading span {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #eef3fb;
+  color: #18243d;
+  border: 1px solid rgba(215, 179, 90, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.venue-heading h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #18243d;
+  margin: 0 0 10px;
+}
+
+.venue-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.venue-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dfe4ec;
+  box-shadow: 0 7px 20px rgba(24, 36, 61, 0.08);
+  transition: 0.25s ease;
+}
+
+.venue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(24, 36, 61, 0.13);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.venue-image-box {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.venue-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.35s ease;
+}
+
+.venue-card:hover .venue-image {
+  transform: scale(1.03);
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.venue-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 11px;
+  border-radius: 4px;
+  background: #198754;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.venue-content {
+  padding: 18px;
+}
+
+.venue-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #18243d;
+  margin: 0 0 5px;
+}
+
+.venue-location {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0 0 14px;
+}
+
+/* =========================
+   DETAILS
+========================= */
+
+.venue-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.venue-details div {
+  background: #f5f7fa;
+  border: 1px solid #e5e9ef;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.venue-details strong {
+  display: block;
+  color: #475569;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.venue-details span {
+  color: #18243d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.venue-button {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d7b35a;
+  border-radius: 5px;
+  background: #18243d;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.venue-button:hover {
+  background: #d7b35a;
+  color: #18243d;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.venue-loading,
+.venue-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .venue-page {
+    padding: 35px 15px 50px;
+  }
+
+  .venue-heading {
+    margin-bottom: 25px;
+  }
+
+  .venue-heading h1 {
+    font-size: 29px;
+  }
+
+  .venue-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .venue-image-box {
+    height: 210px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .venue-heading h1 {
+    font-size: 25px;
+  }
+
+  .venue-heading p {
+    font-size: 13px;
+  }
+
+  .venue-image-box {
+    height: 190px;
+  }
+
+  .venue-content {
+    padding: 15px;
+  }
+
+  .venue-content h2 {
+    font-size: 18px;
+  }
+
+  .venue-details {
+    grid-template-columns: 1fr;
+  }
+}

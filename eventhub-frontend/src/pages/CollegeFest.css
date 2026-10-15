@@ -1,0 +1,283 @@
+/* College Fest Page */
+
+.collegefest-page {
+    min-height: 100vh;
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #7c2d12,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #581c87,
+            transparent 35%
+        ),
+        #171024;
+}
+
+
+/* Container */
+
+.collegefest-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Page Heading */
+
+.collegefest-title {
+    text-align: center;
+
+    font-size: 44px;
+    font-weight: 800;
+
+    color: #fb923c;
+
+    margin-bottom: 10px;
+}
+
+.collegefest-subtitle {
+    text-align: center;
+
+    color: #d8b4fe;
+
+    font-size: 17px;
+
+    margin-bottom: 45px;
+}
+
+
+/* Event Grid */
+
+.collegefest-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 380px));
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+/* Event Card */
+
+.collegefest-card {
+    background: #21152d;
+
+    border: 1px solid #7e22ce;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.45);
+
+    transition: 0.3s ease;
+}
+
+.collegefest-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #f97316;
+
+    box-shadow:
+        0 20px 45px rgba(249, 115, 22, 0.25);
+}
+
+
+/* Image */
+
+.collegefest-image-container {
+    position: relative;
+}
+
+.collegefest-image {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Badge */
+
+.collegefest-badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #f97316,
+        #a855f7
+    );
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Card Body */
+
+.collegefest-card-body {
+    padding: 25px;
+}
+
+.collegefest-card-body h2 {
+    margin: 0 0 10px;
+
+    color: #faf5ff;
+
+    font-size: 25px;
+}
+
+.collegefest-description {
+    color: #c4b5fd;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+
+/* Event Details */
+
+.collegefest-details p {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 9px 0;
+
+    margin: 0;
+
+    border-bottom: 1px solid #3b2a48;
+}
+
+.collegefest-details strong {
+    color: #fb923c;
+}
+
+.collegefest-details span {
+    color: #e9d5ff;
+
+    text-align: right;
+}
+
+
+/* Price */
+
+.collegefest-bottom {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #431407,
+        #3b0764
+    );
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.collegefest-bottom span {
+    color: #c4b5fd;
+}
+
+.collegefest-bottom strong {
+    color: #fb923c;
+
+    font-size: 22px;
+}
+
+
+/* View Details Button */
+
+.collegefest-button {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #f97316,
+        #a855f7
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.collegefest-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(249, 115, 22, 0.35);
+}
+
+
+/* Loading / Empty Message */
+
+.collegefest-message {
+    text-align: center;
+
+    color: #d8b4fe;
+
+    font-size: 18px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .collegefest-page {
+        padding: 40px 15px;
+    }
+
+    .collegefest-title {
+        font-size: 34px;
+    }
+
+    .collegefest-grid {
+        grid-template-columns: 1fr;
+    }
+}

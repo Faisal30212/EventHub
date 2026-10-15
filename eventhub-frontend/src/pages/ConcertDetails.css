@@ -1,0 +1,232 @@
+.concert-details-page {
+  min-height: 100vh;
+  padding: 45px 20px;
+  background:
+    radial-gradient(circle at top left, #312e81, transparent 35%),
+    radial-gradient(circle at bottom right, #701a75, transparent 35%), #09090f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.concert-details-card {
+  width: 100%;
+  max-width: 850px;
+  background: #18181f;
+  border: 1px solid #3b0764;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+.concert-details-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.concert-details-content {
+  padding: 28px 32px;
+}
+
+.concert-details-badge {
+  display: inline-block;
+  padding: 6px 13px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  background: #db2777;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(219, 39, 119, 0.4);
+}
+
+.concert-details-content h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #f5f3ff;
+  margin: 0 0 10px;
+}
+
+.concert-details-description {
+  color: #a1a1aa;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.concert-details-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.concert-details-info p {
+  margin: 0;
+  padding: 13px 15px;
+  background: #27272a;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.concert-details-info strong {
+  color: #c084fc;
+}
+
+.concert-details-info span {
+  color: #d4d4d8;
+  text-align: right;
+}
+
+.concert-details-price {
+  margin-top: 20px;
+  padding: 15px 18px;
+
+  background: linear-gradient(135deg, #2e1065, #4a044e);
+
+  border: 1px solid #581c87;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.concert-details-price span {
+  color: #c4b5fd;
+}
+
+.concert-details-price strong {
+  font-size: 24px;
+  color: #f0abfc;
+}
+
+.concert-back-button {
+  margin-top: 18px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #9333ea, #db2777);
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.concert-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(219, 39, 119, 0.4);
+}
+
+.concert-details-loading {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #09090f;
+  color: #c084fc;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  .concert-details-page {
+    padding: 25px 15px;
+  }
+
+  .concert-details-image {
+    height: 230px;
+  }
+
+  .concert-details-content {
+    padding: 22px;
+  }
+
+  .concert-details-content h1 {
+    font-size: 27px;
+  }
+
+  .concert-details-info {
+    grid-template-columns: 1fr;
+  }
+
+  .concert-details-info p {
+    flex-direction: column;
+  }
+
+  .concert-details-price {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+.birthday-book-button {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #ec4899, #f97316);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.birthday-book-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.35);
+}
+
+.concert-book-button {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #7c3aed, #ec4899);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.concert-book-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.35);
+}

@@ -1,0 +1,180 @@
+.conference-details-page {
+  min-height: 100vh;
+  padding: 45px 20px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe, #e0f2fe);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conference-details-card {
+  width: 100%;
+  max-width: 850px;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(30, 58, 138, 0.15);
+}
+
+.conference-details-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.conference-details-content {
+  padding: 28px 32px;
+}
+
+.conference-details-content h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin: 0 0 8px;
+}
+
+.conference-details-description {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.conference-details-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.conference-details-info p {
+  margin: 0;
+  padding: 13px 15px;
+  background: #eff6ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.conference-details-info strong {
+  color: #2563eb;
+}
+
+.conference-details-info span {
+  color: #334155;
+  text-align: right;
+}
+
+.conference-details-price {
+  margin-top: 20px;
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conference-details-price span {
+  color: #64748b;
+}
+
+.conference-details-price strong {
+  font-size: 24px;
+  color: #1d4ed8;
+}
+
+.conference-back-button {
+  margin-top: 18px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.conference-back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.conference-details-loading {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  color: #1e3a8a;
+}
+
+@media (max-width: 700px) {
+  .conference-details-page {
+    padding: 25px 15px;
+  }
+
+  .conference-details-image {
+    height: 230px;
+  }
+
+  .conference-details-content {
+    padding: 22px;
+  }
+
+  .conference-details-content h1 {
+    font-size: 27px;
+  }
+
+  .conference-details-info {
+    grid-template-columns: 1fr;
+  }
+
+  .conference-details-info p {
+    flex-direction: column;
+  }
+
+  .conference-details-price {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+.conference-book-button {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-bottom: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.conference-book-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+}

@@ -1,0 +1,412 @@
+/* =========================================
+   EVENTHUB EVENT INFORMATION PAGE
+   Navy + Gold
+========================================= */
+
+.event-info-page {
+  min-height: 100vh;
+  background: #f7f5ef;
+  color: #18243d;
+  padding-bottom: 50px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.event-info-header {
+  background: #18243d;
+  text-align: center;
+  padding: 65px 20px 55px;
+  color: #ffffff;
+}
+
+.event-info-label {
+  display: inline-block;
+  padding: 6px 13px;
+  margin-bottom: 14px;
+
+  color: #d7b35a;
+  border: 1px solid #d7b35a;
+  border-radius: 3px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.event-info-header h1 {
+  margin: 0;
+
+  color: #ffffff !important;
+
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.event-main-icon {
+  margin-left: 8px;
+  font-size: 36px;
+}
+
+.event-info-header p {
+  max-width: 650px;
+  margin: 12px auto 0;
+
+  color: #d9deea !important;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.event-info-container {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+  padding: 42px 20px 0;
+}
+
+/* =========================================
+   INFORMATION SECTION
+========================================= */
+
+.event-info-section {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 18px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid #ddd8cc;
+}
+
+.event-section-number {
+  color: #b1872c;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.event-info-section h2,
+.event-info-content h2 {
+  margin: 0 0 12px;
+
+  color: #18243d !important;
+
+  font-size: 24px;
+  font-weight: 750;
+}
+
+.event-info-description {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #59677d !important;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.event-service-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px 35px;
+}
+
+.event-service-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 9px 0;
+
+  color: #46556d;
+
+  font-size: 13px;
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+
+  color: #a17b25;
+  background: #f1e8cf;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* =========================================
+   SUITABLE FOR
+========================================= */
+
+.event-suitable-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.suitable-item {
+  padding: 9px 15px;
+
+  color: #46556d;
+  background: #ffffff;
+
+  border: 1px solid #ded9ce;
+  border-radius: 4px;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   PACKAGE
+========================================= */
+
+.event-package-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin: 32px 0;
+  padding: 28px 30px;
+
+  background: #18243d;
+
+  border-left: 4px solid #d7b35a;
+  border-radius: 5px;
+
+  box-shadow: 0 8px 20px rgba(24, 36, 61, 0.12);
+}
+
+.package-label {
+  color: #d7b35a;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.event-package-box h2 {
+  margin: 5px 0;
+
+  color: #ffffff !important;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.event-package-box p {
+  max-width: 600px;
+  margin: 5px 0 0;
+
+  color: #c9d0dc !important;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.event-package-box button {
+  flex-shrink: 0;
+
+  padding: 12px 20px;
+
+  color: #18243d;
+  background: #d7b35a;
+
+  border: none;
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.event-package-box button:hover {
+  background: #e4c675;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   PROCESS
+========================================= */
+
+.event-process {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 18px;
+
+  padding: 28px 0;
+}
+
+.event-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.event-process-grid > div {
+  padding: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #ded9ce;
+  border-radius: 5px;
+}
+
+.event-process-grid strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  margin-bottom: 10px;
+
+  color: #18243d;
+  background: #d7b35a;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+}
+
+.event-process-grid h3 {
+  margin: 0 0 7px;
+
+  color: #18243d;
+
+  font-size: 14px;
+}
+
+.event-process-grid p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.event-back-button {
+  display: block;
+
+  margin: 25px auto 0;
+  padding: 9px 16px;
+
+  color: #18243d;
+  background: transparent;
+
+  border: 1px solid #18243d;
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.event-back-button:hover {
+  color: #ffffff;
+  background: #18243d;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .event-info-header h1 {
+    font-size: 34px;
+  }
+
+  .event-service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .event-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-package-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+  .event-info-header {
+    padding: 50px 15px 42px;
+  }
+
+  .event-info-header h1 {
+    font-size: 29px;
+  }
+
+  .event-main-icon {
+    font-size: 27px;
+  }
+
+  .event-info-container {
+    padding: 25px 15px 0;
+  }
+
+  .event-info-section,
+  .event-process {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .event-section-number {
+    margin-bottom: 2px;
+  }
+
+  .event-info-section h2,
+  .event-info-content h2 {
+    font-size: 21px;
+  }
+
+  .event-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-package-box {
+    padding: 22px;
+  }
+
+  .event-package-box button {
+    width: 100%;
+  }
+}

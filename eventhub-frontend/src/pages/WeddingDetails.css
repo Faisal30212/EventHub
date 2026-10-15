@@ -1,0 +1,348 @@
+/* =========================================
+   WEDDING DETAILS PAGE
+   Same layout as Conference Details
+========================================= */
+
+.wedding-details-page {
+  min-height: 100vh;
+
+  padding: 45px 20px;
+
+  background: linear-gradient(135deg, #fff7ed, #fef3c7, #fce7f3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* Main Card */
+
+.wedding-details-card {
+  width: 100%;
+  max-width: 850px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.wedding-details-page .details-image {
+  display: block;
+
+  width: 100%;
+  height: 300px;
+
+  object-fit: cover;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.wedding-details-page .details-content {
+  width: 100%;
+
+  padding: 28px 32px;
+
+  box-sizing: border-box;
+}
+
+/* Title */
+
+.wedding-details-page .details-content h1 {
+  margin: 0 0 8px;
+
+  color: #92400e;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+/* Description */
+
+.wedding-details-page .details-description {
+  margin: 0 0 22px;
+
+  color: #78716c;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   INFORMATION BOXES
+========================================= */
+
+.wedding-details-page .details-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.wedding-details-page .details-info p {
+  min-height: 46px;
+
+  margin: 0;
+
+  padding: 13px 15px;
+
+  background: #fffbeb;
+
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.wedding-details-page .details-info strong {
+  color: #b45309;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.wedding-details-page .details-info span {
+  color: #44403c;
+
+  font-size: 14px;
+
+  text-align: right;
+
+  line-height: 1.4;
+}
+
+/* =========================================
+   PRICE
+========================================= */
+
+.wedding-details-page .details-price {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 15px 18px;
+
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.wedding-details-page .details-price span {
+  color: #78716c;
+
+  font-size: 14px;
+}
+
+.wedding-details-page .details-price strong {
+  color: #b45309;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+/* =========================================
+   BOOK NOW BUTTON
+   IMPORTANT: Full width like Conference
+========================================= */
+
+.wedding-details-page .book-now-button {
+  display: block;
+
+  width: 100%;
+
+  height: 46px;
+
+  margin: 12px 0 0;
+
+  padding: 0 16px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #f97316, #ec4899);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.wedding-details-page .book-now-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3);
+}
+
+.wedding-details-page .book-now-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   BACK BUTTON
+   Keep it BELOW Book Now
+   Align LEFT like Conference
+========================================= */
+
+.wedding-details-page .back-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: auto;
+
+  min-height: 40px;
+
+  margin-top: 18px;
+
+  padding: 11px 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #92400e, #b45309);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.wedding-details-page .back-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(120, 53, 15, 0.22);
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.details-loading {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff7ed;
+
+  color: #92400e;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .wedding-details-page {
+    padding: 25px 15px;
+  }
+
+  .wedding-details-page .details-image {
+    height: 230px;
+  }
+
+  .wedding-details-page .details-content {
+    padding: 22px;
+  }
+
+  .wedding-details-page .details-content h1 {
+    font-size: 27px;
+  }
+
+  .wedding-details-page .details-info {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-details-page .details-info p {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .wedding-details-page .details-info span {
+    text-align: left;
+  }
+
+  .wedding-details-page .details-price {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 6px;
+  }
+
+  .wedding-details-page .back-button {
+    width: 100%;
+  }
+}
