@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";
 import FeaturedEvents from "../components/FeaturedEvents";
-import API_BASE_URL from "../api/api";
+import API_BASE_URL from "../api/Api.js";
 import "./Home.css";
 
 function Home() {

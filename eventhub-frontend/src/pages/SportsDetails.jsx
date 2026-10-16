@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import API_BASE_URL from "../api/api";
+import API_BASE_URL from "../api/Api.js";
 import sportsImage from "../assets/images/sports.jpg";
 import "./SportsDetails.css";
 

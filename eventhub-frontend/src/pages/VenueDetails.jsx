@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import API_BASE_URL from "../api/api";
+import API_BASE_URL from "../api/Api.js";
 
 import Venue1 from "../assets/images/Venue1.jpg";
 import Venue2 from "../assets/images/Venue2.jpg";
