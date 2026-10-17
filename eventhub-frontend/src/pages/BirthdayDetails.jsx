@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./BirthdayDetails.css";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "https://eventhub-production-4dcd.up.railway.app";
 
 function BirthdayDetails() {
   const { id } = useParams();

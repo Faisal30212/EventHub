@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "https://eventhub-production-4dcd.up.railway.app";
 
 function Dashboard() {
-
   const navigate = useNavigate();
 
   const [bookings, setBookings] = useState([]);
@@ -14,9 +13,7 @@ function Dashboard() {
 
   // Load all customer event requests
   const loadBookings = async () => {
-
     try {
-
       setLoading(true);
       setMessage("");
 
@@ -33,17 +30,13 @@ function Dashboard() {
       } else {
         setBookings([]);
       }
-
     } catch (error) {
-
       console.error("Dashboard error:", error);
 
       setMessage(
-        "Unable to load booking requests. Please make sure Spring Boot is running."
+        "Unable to load booking requests. Please make sure Spring Boot is running.",
       );
-
     } finally {
-
       setLoading(false);
     }
   };
@@ -54,23 +47,21 @@ function Dashboard() {
 
   // Count requests by status
   const requestedCount = bookings.filter(
-    (booking) => booking.bookingStatus === "REQUESTED"
+    (booking) => booking.bookingStatus === "REQUESTED",
   ).length;
 
   const acceptedCount = bookings.filter(
-    (booking) => booking.bookingStatus === "ACCEPTED"
+    (booking) => booking.bookingStatus === "ACCEPTED",
   ).length;
 
   const completedCount = bookings.filter(
-    (booking) => booking.bookingStatus === "COMPLETED"
+    (booking) => booking.bookingStatus === "COMPLETED",
   ).length;
 
   return (
     <div className="dashboard-page">
-
       {/* HEADER */}
       <header className="dashboard-header">
-
         <div>
           <span className="dashboard-label">EVENTHUB</span>
 
@@ -88,14 +79,11 @@ function Dashboard() {
         >
           ← Home
         </button>
-
       </header>
 
       <main className="dashboard-container">
-
         {/* SUMMARY CARDS */}
         <section className="dashboard-summary">
-
           <div className="summary-card">
             <div className="summary-icon">📋</div>
 
@@ -131,22 +119,17 @@ function Dashboard() {
               <strong>{completedCount}</strong>
             </div>
           </div>
-
         </section>
 
         {/* REQUESTS SECTION */}
         <section className="requests-section">
-
           <div className="requests-header">
-
             <div>
               <span className="section-label">CUSTOMER REQUESTS</span>
 
               <h2>Event Planning Requests</h2>
 
-              <p>
-                Review and manage requests submitted by customers.
-              </p>
+              <p>Review and manage requests submitted by customers.</p>
             </div>
 
             <button
@@ -156,32 +139,23 @@ function Dashboard() {
             >
               ↻ Refresh
             </button>
-
           </div>
 
           {loading && (
-            <div className="dashboard-message">
-              Loading booking requests...
-            </div>
+            <div className="dashboard-message">Loading booking requests...</div>
           )}
 
           {!loading && message && (
-            <div className="dashboard-error">
-              {message}
-            </div>
+            <div className="dashboard-error">{message}</div>
           )}
 
           {!loading && !message && bookings.length === 0 && (
-            <div className="dashboard-message">
-              No event requests found.
-            </div>
+            <div className="dashboard-message">No event requests found.</div>
           )}
 
           {!loading && bookings.length > 0 && (
             <div className="booking-table-wrapper">
-
               <table className="booking-table">
-
                 <thead>
                   <tr>
                     <th>Booking</th>
@@ -198,50 +172,35 @@ function Dashboard() {
                 </thead>
 
                 <tbody>
-
                   {bookings.map((booking) => (
-
                     <tr key={booking.bookingId}>
-
                       <td>
                         <strong>#{booking.bookingId}</strong>
                       </td>
 
-                      <td>
-                        User #{booking.userId}
-                      </td>
+                      <td>User #{booking.userId}</td>
 
-                      <td>
-                        Event #{booking.eventId}
-                      </td>
+                      <td>Event #{booking.eventId}</td>
 
-                      <td>
-                        Venue #{booking.venueId}
-                      </td>
+                      <td>Venue #{booking.venueId}</td>
 
-                      <td>
-                        {booking.eventDate || "-"}
-                      </td>
+                      <td>{booking.eventDate || "-"}</td>
 
-                      <td>
-                        {booking.eventTime || "-"}
-                      </td>
+                      <td>{booking.eventTime || "-"}</td>
 
-                      <td>
-                        {booking.guestCount ?? "-"}
-                      </td>
+                      <td>{booking.guestCount ?? "-"}</td>
 
                       <td>
                         ₹
-                        {Number(
-                          booking.totalAmount || 0
-                        ).toLocaleString("en-IN")}
+                        {Number(booking.totalAmount || 0).toLocaleString(
+                          "en-IN",
+                        )}
                       </td>
 
                       <td>
                         <span
                           className={`status-badge status-${String(
-                            booking.bookingStatus || "UNKNOWN"
+                            booking.bookingStatus || "UNKNOWN",
                           ).toLowerCase()}`}
                         >
                           {booking.bookingStatus || "UNKNOWN"}
@@ -251,22 +210,14 @@ function Dashboard() {
                       <td className="requirements-cell">
                         {booking.requirements || "No additional requirements"}
                       </td>
-
                     </tr>
-
                   ))}
-
                 </tbody>
-
               </table>
-
             </div>
           )}
-
         </section>
-
       </main>
-
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Booking.css";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "https://eventhub-production-4dcd.up.railway.app";
 
 function Booking() {
   const navigate = useNavigate();

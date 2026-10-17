@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Bill.css";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "https://eventhub-production-4dcd.up.railway.app";
 
 function Bill() {
   const { bookingId } = useParams();
