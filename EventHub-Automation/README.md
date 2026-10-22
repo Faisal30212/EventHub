@@ -1,104 +1,147 @@
-# EventHub – Selenium & Cucumber Automation
+# EventHub Automation Framework
 
-An automated testing project for the EventHub Smart Event & Conference Management Platform, built using Selenium WebDriver, Java, TestNG, Maven, and Cucumber BDD.
+Automated UI testing for the **EventHub Smart Event & Conference Management Platform**, a web application for browsing events, exploring venues, registering users, and managing event-related workflows.
 
-## Technologies Used
+**Live Application:** https://event-hub-eta-six.vercel.app/  
+**GitHub:** https://github.com/Faisal30212/EventHub
 
-- Java 21
-- Selenium WebDriver 4.38.0
-- TestNG 7.11.0
-- Cucumber 7
+## Tech Stack
+
+- Java
+- Selenium WebDriver
+- TestNG
+- Cucumber (BDD)
 - Maven
-- Chrome WebDriver
+- Google Chrome
 - Git and GitHub
 
-## Application Under Test
+## Framework Features
 
-**EventHub:** https://event-hub-eta-six.vercel.app/
+- Browser-based UI automation using Selenium WebDriver
+- TestNG-based test execution and assertions
+- Data-driven tests using multiple input combinations
+- BDD scenarios written in Gherkin with Cucumber
+- Organized test classes by application module
+- Maven-based dependency management and test execution
+- HTML report generation for Cucumber scenarios
 
 ## Project Structure
 
 ```text
 EventHub-Automation/
-├── src/test/java/com/eventhub/
-│   ├── cucumber/
-│   ├── pages/
-│   └── tests/
-│       ├── booking/
-│       ├── events/
-│       ├── feedback/
-│       ├── login/
-│       ├── manager/
-│       ├── registration/
-│       └── venues/
-├── src/test/resources/
-│   └── features/
-│       ├── booking.feature
-│       ├── event-browsing.feature
-│       ├── feedback.feature
-│       ├── homepage.feature
-│       ├── login.feature
-│       ├── my-events.feature
-│       ├── registration.feature
-│       └── venues.feature
-└── pom.xml
+├── pom.xml
+├── README.md
+├── src/
+│   └── test/
+│       ├── java/
+│       │   └── com/eventhub/
+│       │       ├── base/
+│       │       ├── cucumber/
+│       │       ├── pages/
+│       │       └── tests/
+│       │           ├── booking/
+│       │           ├── datadriven/
+│       │           ├── events/
+│       │           ├── feedback/
+│       │           ├── login/
+│       │           ├── manager/
+│       │           ├── registration/
+│       │           └── venues/
+│       └── resources/
+│           └── features/
+│               ├── homepage.feature
+│               ├── login.feature
+│               ├── booking.feature
+│               ├── venues.feature
+│               ├── registration.feature
+│               ├── event-browsing.feature
+│               ├── my-events.feature
+│               └── feedback.feature
+└── target/
+    └── cucumber-report.html
 ```
 
-## Test Coverage
+_The `target/` directory contains generated build and test output. It is created by Maven and may not be committed to Git._
 
-### Selenium WebDriver
+## Prerequisites
 
-- Homepage navigation
-- Customer registration and login
-- Event browsing and categories
-- Booking forms and booking management
-- Venue browsing and details
-- Customer feedback and suggestions
-- Manager dashboard and login
+Install and configure:
 
-### Cucumber BDD
+- JDK compatible with the project configuration
+- Apache Maven
+- Google Chrome
+- Git (optional, for repository operations)
 
-- Homepage navigation
-- Customer login page navigation
-- Booking entry-page navigation
-- Venue entry-page navigation
-- Registration page navigation
-- Event browsing entry-page navigation
-- My Events entry-page navigation
-- Homepage navigation for feedback
-
-## How to Run
-
-### Prerequisites
-
-- Java JDK 21
-- Maven installed and configured in PATH
-- Google Chrome installed
-
-### Run Cucumber Tests
+Verify Java and Maven:
 
 ```bash
-mvn -Dtest=CucumberTestRunner test
+java -version
+mvn -version
 ```
 
-### Run a Specific Selenium Test
+## Running Tests
 
-```bash
-mvn -Dtest=CategoryTest test
-```
-
-### Run the Selenium Test Suite
+Run the complete Maven test suite:
 
 ```bash
 mvn clean test
 ```
 
-## Notes
+Run the Cucumber test runner:
 
-- The application is hosted on Vercel.
-- Cucumber scenarios currently focus primarily on navigation checks.
-- Some application routes and feature interactions may require further verification.
-- Test results depend on application availability and browser compatibility.
+```bash
+mvn -Dtest=CucumberTestRunner test
+```
+
+Run the data-driven test classes:
+
+```bash
+mvn -Dtest=DataDriven*Test test
+```
+
+Run a specific Selenium test class:
+
+```bash
+mvn -Dtest=CategoryTest test
+```
+
+Run the registration validation test:
+
+```bash
+mvn -Dtest=DataDrivenRegistrationValidationTest test
+```
+
+Run these commands from the `EventHub-Automation` directory.
+
+## Test Reports
+
+After a Maven test run, inspect:
+
+- `target/surefire-reports/` — TestNG/Maven test result reports
+- `target/cucumber-report.html` — HTML report configured for Cucumber execution
+
+The Cucumber report is generated when the Cucumber runner executes. Open it in a browser to review the scenarios and their results.
+
+## Current Test Coverage
+
+The framework contains Selenium/TestNG tests, data-driven tests, and Cucumber feature scenarios organized around EventHub modules, including:
+
+- Homepage and navigation
+- Login and registration
+- Event browsing and categories
+- Venue browsing and details
+- Booking-related workflows
+- My Events
+- Feedback and suggestions
+- Manager-related pages
+
+**Coverage note:** Some Cucumber scenarios and data-driven cases currently perform page-load or navigation checks rather than verifying the complete business workflow. Their presence does not imply that every underlying feature is fully validated. Further interaction-level assertions and end-to-end checks can extend coverage.
+
+## Troubleshooting
+
+- **`ERR_INTERNET_DISCONNECTED`:** Check your internet connection and confirm the live application opens in Chrome before rerunning the affected test.
+- **Chrome DevTools Protocol (CDP) warnings:** These may appear when the installed Chrome version does not have a matching Selenium CDP implementation. If tests still pass, the warnings alone do not indicate a failed test.
+- **Test failures:** Review the individual files in `target/surefire-reports/` to find the failing test and its exception.
 
 ## Author
 
