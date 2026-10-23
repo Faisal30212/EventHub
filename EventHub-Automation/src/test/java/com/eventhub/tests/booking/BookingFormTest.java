@@ -2,6 +2,7 @@
 package com.eventhub.tests.booking;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,8 +16,11 @@ import org.testng.annotations.Test;
 
 public class BookingFormTest {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
+
+    private static final String HOME_URL =
+            "https://event-hub-eta-six.vercel.app/";
 
     @BeforeMethod
     public void setup() {
@@ -26,48 +30,74 @@ public class BookingFormTest {
         wait = new WebDriverWait(
                 driver, Duration.ofSeconds(15));
 
-        driver.get("https://event-hub-eta-six.vercel.app/");
+        driver.get(HOME_URL);
     }
 
-    // Verify that the EventHub home page opens before starting booking.
     @Test
     public void verifyHomePageBeforeBooking() {
+        wait.until(d ->
+                d.findElement(By.tagName("body")).isDisplayed());
+
         Assert.assertTrue(
-                driver.getCurrentUrl().contains("event-hub-eta-six.vercel.app"),
-                "EventHub home page did not open");
+                driver.getCurrentUrl().startsWith(HOME_URL),
+                "EventHub home page did not open correctly.");
+
+        Assert.assertTrue(
+                driver.getTitle() != null
+                        && !driver.getTitle().trim().isEmpty(),
+                "The browser page title is empty.");
+
+        System.out.println("Home page URL: " + driver.getCurrentUrl());
+        System.out.println("Page title: " + driver.getTitle());
     }
 
-    // Verify that the home page contains a visible booking-related action.
     @Test
     public void verifyBookingActionIsVisible() {
-        java.util.List<WebElement> actions = driver.findElements(
-                By.cssSelector(
-                        "a[href*='book'], a[href*='booking'], "
-                        + "button[class*='book']"));
+        By bookingActions = By.cssSelector(
+                "a[href*='book'], "
+                + "a[href*='booking'], "
+                + "button[class*='book'], "
+                + "a[class*='book'], "
+                + "button[id*='book'], "
+                + "a[id*='book']");
+
+        List<WebElement> actions =
+                driver.findElements(bookingActions);
+
+        System.out.println(
+                "Booking actions found: " + actions.size());
 
         boolean visibleActionFound = false;
 
         for (WebElement action : actions) {
             if (action.isDisplayed()) {
                 visibleActionFound = true;
-                break;
+
+                System.out.println(
+                        "Tag: " + action.getTagName()
+                        + " | Text: " + action.getText()
+                        + " | Href: "
+                        + action.getAttribute("href"));
             }
         }
 
         Assert.assertTrue(
                 visibleActionFound,
-                "No visible booking action was found");
+                "No visible booking action matched the configured selectors.");
     }
 
-    // Verify that the page has loaded its main content.
     @Test
     public void verifyPageContentIsDisplayed() {
-        WebElement body = driver.findElement(By.tagName("body"));
+        WebElement body = wait.until(
+                d -> d.findElement(By.tagName("body")));
 
-        Assert.assertTrue(body.isDisplayed());
+        Assert.assertTrue(
+                body.isDisplayed(),
+                "The page body is not visible.");
+
         Assert.assertFalse(
                 body.getText().trim().isEmpty(),
-                "The page has no visible content");
+                "The page has no visible text content.");
     }
 
     @AfterMethod(alwaysRun = true)
