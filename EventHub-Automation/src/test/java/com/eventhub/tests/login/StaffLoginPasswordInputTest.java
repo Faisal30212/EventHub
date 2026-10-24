@@ -1,7 +1,7 @@
-
 package com.eventhub.tests.login;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,43 +12,48 @@ import org.testng.annotations.Test;
 
 public class StaffLoginPasswordInputTest {
 
-    WebDriver driver;
+    private WebDriver driver;
+    private final String baseUrl =
+            "https://event-hub-eta-six.vercel.app/staff-login";
 
     @BeforeMethod
     public void setup() {
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://event-hub-eta-six.vercel.app/staff-login");
+
+        // Avoid the Chrome maximize timeout
+        driver.manage().window().setSize(new Dimension(1366, 768));
+
+        driver.get(baseUrl);
     }
 
-    // Verify that the password field accepts entered text.
     @Test
     public void verifyPasswordFieldAcceptsInput() {
-        WebElement passwordField =
-            driver.findElement(By.cssSelector("input[type='password']"));
+        WebElement passwordField = driver.findElement(
+                By.cssSelector("input[type='password']")
+        );
 
         passwordField.sendKeys("TestPassword123");
 
         Assert.assertEquals(
-            passwordField.getAttribute("value"),
-            "TestPassword123",
-            "Password field did not accept the entered text"
+                passwordField.getAttribute("value"),
+                "TestPassword123",
+                "Password field should accept input"
         );
     }
 
-    // Verify that the password field can be cleared.
     @Test
     public void verifyPasswordFieldCanBeCleared() {
-        WebElement passwordField =
-            driver.findElement(By.cssSelector("input[type='password']"));
+        WebElement passwordField = driver.findElement(
+                By.cssSelector("input[type='password']")
+        );
 
         passwordField.sendKeys("TestPassword123");
         passwordField.clear();
 
         Assert.assertEquals(
-            passwordField.getAttribute("value"),
-            "",
-            "Password field was not cleared"
+                passwordField.getAttribute("value"),
+                "",
+                "Password field should be clearable"
         );
     }
 

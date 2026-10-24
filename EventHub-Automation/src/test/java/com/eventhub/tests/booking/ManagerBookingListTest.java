@@ -5,7 +5,6 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,25 +28,68 @@ public class ManagerBookingListTest {
 
         wait = new WebDriverWait(
                 driver, Duration.ofSeconds(30));
+
+        driver.get(BASE_URL + "/staff-login");
     }
 
     @Test
-    public void verifyStaffLoginFormIsDisplayed() {
-        driver.get(BASE_URL + "/staff-login");
+    public void verifyAuthenticatedManagerCanAccessBookingList() {
 
-        WebElement emailInput = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.cssSelector("input[type='email']")));
+        String email = System.getenv("EVENTHUB_MANAGER_EMAIL");
+        String password = System.getenv("EVENTHUB_MANAGER_PASSWORD");
 
-        WebElement passwordInput = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(
-                        By.cssSelector("input[type='password']")));
+        Assert.assertNotNull(email,
+                "EVENTHUB_MANAGER_EMAIL environment variable is missing.");
 
-        Assert.assertTrue(emailInput.isDisplayed(),
-                "Email input is not displayed.");
+        Assert.assertNotNull(password,
+                "EVENTHUB_MANAGER_PASSWORD environment variable is missing.");
 
-        Assert.assertTrue(passwordInput.isDisplayed(),
-                "Password input is not displayed.");
+        driver.findElement(
+                By.cssSelector("input[type='email']"))
+                .sendKeys(email);
+
+        driver.findElement(
+                By.cssSelector("input[type='password']"))
+                .sendKeys(password);
+
+        driver.findElement(
+                By.cssSelector("button.login-btn"))
+                .click();
+
+        wait.until(ExpectedConditions.urlContains(
+                "/manager-dashboard"));
+
+        wait.until(d ->
+                d.findElements(By.cssSelector(".manager-table")).size() > 0
+                || d.findElements(By.cssSelector(".manager-empty"))
+                       .stream()
+                       .anyMatch(e -> e.getText().contains(
+                               "No event requests found"))
+                || d.findElements(By.cssSelector(
+                        ".manager-message-error")).size() > 0);
+
+        Assert.assertTrue(
+                driver.getCurrentUrl().contains("/manager-dashboard"),
+                "Manager did not reach the dashboard.");
+
+        Assert.assertEquals(
+                driver.findElements(By.cssSelector(
+                        ".manager-message-error")).size(),
+                0,
+                "Manager dashboard could not load booking data.");
+
+        boolean tableVisible = driver.findElements(
+                By.cssSelector(".manager-table")).size() > 0;
+
+        boolean emptyStateVisible = driver.findElements(
+                By.cssSelector(".manager-empty"))
+                .stream()
+                .anyMatch(e -> e.getText().contains(
+                        "No event requests found"));
+
+        Assert.assertTrue(
+                tableVisible || emptyStateVisible,
+                "Neither the booking table nor the empty state appeared.");
     }
 
     @AfterMethod(alwaysRun = true)
